@@ -1,0 +1,22 @@
+<audio poster="{{music.poster}}" name="{{music.name}}" author="{{music.author}}" src="{{music.src}}" id="myAudio" controls bindended="eventHandle" class="audio" bindtimeupdate="play">
+<progress percent="{{num}}" />
+<view class="word">
+    <image src="../../icont/ci.png" bindtap="big"></image>
+</view>
+<view animation="{{animationData}}" class="wordList">{{words}}</view>
+</audio>
+
+
+<!--<button type="primary" bindtap="audio14">设置当前播放时间为14秒</button>-->
+
+<scroll-view class="scroll-view_H" scroll-y="true" style="height: {{scrollHeight}}px">
+   <view class="music" wx:for="{{musiclist}}" wx:for-item="music" wx:for-index="idx" wx:key="{{idx}}" >
+        <view class="poster">
+            <image src="{{music.poster}}" bindtap="playmusic" data-idx="{{idx}}"></image>
+            <view class="back">
+                <view class="name">{{music.name}}</view>
+                <view class="author">{{music.author}}</view>
+            </view> 
+        </view> 
+   </view> 
+</scroll-view>

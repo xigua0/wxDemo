@@ -1,0 +1,60 @@
+.movie image{
+    width: 61px;
+    height: 84px;
+    float: left
+}
+.movie{
+    overflow: hidden;
+    margin: 15px 5px
+}
+.nm{
+    font-size: 14px;
+    padding: 4px 0 7px;
+    color: #000;
+    max-height: 45px;
+    overflow: hidden;
+    line-height: 1.2;
+}
+.scm{
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size:12px;
+    line-height:30px;
+}
+.showInfo{
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size:12px
+}
+.beset{
+    margin-left:10px;
+    float: left
+}
+.shop{
+    float: right;
+    padding: 10px 10px 0 0;
+}
+.sc{
+    display: block;
+    color: #ff9a00;
+    font-size: 20px;
+    line-height: 24px;
+    white-space: nowrap;
+    text-align:right;
+}
+.button{
+    font-size: 13px;
+    padding: 4px 17px;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #e54847;
+    color: #e54847;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    margin-top: 20px
+}

@@ -1,0 +1,35 @@
+<scroll-view class="scroll-view_H" scroll-y="true" style="height: {{scrollHeight}}px">
+<view class="section tc">
+  <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls style="width: 100%;height: 250px;"></video>
+</view>
+<view class="main" bindtap="detail">
+    <view class="title">{{list.name}}</view>
+    <view class="time">{{list.duration_fmt}}</view>
+    <image src="{{pic}}"></image>
+</view>
+ <!--<view class="classname" wx:for="{{vedioList}}" wx:key="{{index}}">
+    <view class="classname">
+      <image src="{{item.pic_url}}"></image>
+      <view class="classname">{{item.name}}</view>
+      <view class="classname">{{item.duration_fmt}}</view>
+    </view>
+    
+</view>-->
+</scroll-view>
+<scroll-view class="scroll-view_H" scroll-y="true" style="height: {{scrollHeight}}px;z-index:9999">
+  <view animation="{{animationData}}" style="height:0px;width:95%;">
+  <view class="back">
+    <view class="precondition">基本:{{list.precondition}}</view>
+    <view class="description">{{list.description}}</view>
+  </view>
+  </view>
+</scroll-view>
+<view class="about">相关视频</view>
+<view class="classname" wx:for="{{vedioList}}" wx:key="{{index}}">
+    <view class="list" bindtap="play" data-id="{{item.id}}">
+      <image src="{{item.pic_url}}"></image>
+      <view class="words">{{item.name}}</view>
+      <view class="names">{{item.duration_fmt}}</view>
+    </view>
+    
+</view>

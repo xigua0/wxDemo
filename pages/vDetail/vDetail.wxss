@@ -1,0 +1,66 @@
+.title{
+    width:252px;
+    background:0 0;
+    padding:1px 4px;
+    color:#333;
+    font-size:14px;
+    overflow:hidden;
+    margin-bottom:10px;
+}
+.time{
+    font-size:12px;
+    color:#999;
+    margin-left:5px;
+}
+.main{
+    padding:10px 0 10px 10px;
+    border-top:1px solid #ddd;
+    margin-top:10px;
+    border-bottom:1px solid #ddd;
+    position: relative;
+}
+.main image{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    right:33px;
+    top:22px;
+}
+.precondition{
+    font-size: 14px;
+    color: #666;
+}
+.description{
+    color:#999;
+    font-size: 14px;
+    margin-top:20px;
+}
+.back{
+    padding:20px 10px 10px;
+}
+.list{
+    overflow: hidden;
+    margin-top:10px
+}
+.list image{
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin:10px 20px;
+    border-radius: 50%
+}
+.names{
+    font-size:12px;
+    color:#909090;
+    margin-right:20px;
+}
+.words{
+    font-size:14px;
+    color:#555;
+    font-family:"Microsoft YaHei", SimHei, helvetica, arial, verdana, tahoma, sans-serif;
+    margin:20px 5px
+}
+.about{
+    font-size:14px;
+    margin:15px;
+}
