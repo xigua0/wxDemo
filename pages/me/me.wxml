@@ -1,2 +1,9 @@
-<!--pages/me/me.wxml-->
-<text>pages/me/me.wxml</text>
+<view class="ticket">
+    <view class="word">您还没有电影票,快去购买吧</view>
+    <view class="footer">
+        <view class="foot">电影</view>
+        <view class="foot">影院</view>
+        <view class="foot">我的</view>
+        <view class="foot">客户端下载</view>
+    </view>
+</view>

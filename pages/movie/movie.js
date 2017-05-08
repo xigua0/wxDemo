@@ -24,6 +24,13 @@ Page({
       }
     })
   },
+  mDetail:function(event){
+    var id = event.target.dataset.id
+    console.log(id)
+    wx.navigateTo({
+      url: '../mDetail/mDetail?id='+id
+    })
+  },
   onReady:function(){
     // 页面渲染完成
   },

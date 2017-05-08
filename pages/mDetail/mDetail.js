@@ -1,41 +1,48 @@
-// pages/vDetail/vDetail.js
+// pages/mDetail/mDetail.js
 Page({
   data:{
     list:[],
-    vedioList:[],
     id:0,
-    animationData: {},
-    bstop:1,
-    pic:'../../icont/下标.png'
+    snum:0,
+    detail:'',
+    pic:'../../icont/下标.png',
+    movies:[]
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
-    var that =this
     var id = options.id
-    var d={}
+    var that = this
+    var d = {}
     console.log(id)
-    that.setData({
-      id:id
-    })
     wx.request({
-      url:"http://www.imooc.com/course/ajaxlist",
+      url:"http://m.maoyan.com/movie/"+id+".json",
       method:"GET",
       success:function(res){
-        for(var i=0;i<res.data.list.length;i++){
-          if(res.data.list[i].id==id){
-            d=res.data.list[i];
-            break
-          }
-        }
+        console.log(res)
         that.setData({
-           list:d,
-           vedioList:res.data.list
+           list:res.data.data.MovieDetailModel,
         })
-        console.log(that.data.vedioList)
+        var a=that.data.list.dra
+        var b=a.replace(/[a-z<>/]+/g,"")
+        that.setData({
+           snum:parseInt(that.data.list.snum/10000),
+           detail:b
+        })  
+        //console.log(that.data.detail)
+      }
+    })
+    wx.request({
+      url:"http://m.maoyan.com/movie/list.json?type=hot&offset=0&limit=1000",
+      method:"GET",
+      success:function(res){
+        console.log(res.data.data.movies,1)
+        that.setData({
+           movies:res.data.data.movies
+        })
       }
     })
   },
-  detail:function(){
+  show:function(){
     var that = this
     console.log(1)
     var animation = wx.createAnimation({
@@ -45,7 +52,7 @@ Page({
 
     that.animation = animation
     if(that.data.bstop==1){
-      animation.height(190).step()
+      animation.height('100%').step()
 
       that.setData({
         animationData:animation.export(),
@@ -53,7 +60,7 @@ Page({
         pic:'../../icont/上标.png'
       })
     }else{
-      animation.height(0).step()
+      animation.height(48).step()
 
       that.setData({
         animationData:animation.export(),
@@ -61,14 +68,6 @@ Page({
         pic:'../../icont/下标.png'
       })
     }
-    
-  },
-  play:function(event){
-    var id = event.target.dataset.id
-    console.log(id)
-    wx.navigateTo({
-      url: '../vDetail/vDetail?id='+id
-    })
   },
   onReady:function(){
     // 页面渲染完成

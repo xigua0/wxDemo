@@ -1,1 +1,24 @@
-/* pages/me/me.wxss */
+.word{
+    height:400px;
+    text-align:center;
+    line-height:400px;
+    background:#fff;
+}
+.ticket{
+    background: #eee
+}
+.footer{
+    height: 40px
+}
+.foot{
+    display:inline-block;
+    padding:5px;
+    font-size:12px;
+    width:80px;
+    text-align:center;
+    border-right:1px solid #ddd;
+    margin-top:10px;
+}
+page{
+    background: #eee
+}

@@ -1,0 +1,30 @@
+<scroll-view class="scroll-view_H" scroll-y="true" style="height: {{scrollHeight}}px">
+<view class="movieDetail">
+    <view class="d-idx" style="background:url({{list.img}}"></view>
+    <view class="black"></view>
+    <image src="{{list.img}}"></image>
+    <view class="intro">
+        <view class="nm">{{list.nm}}</view>
+        用户评分<view class="sc top">{{list.sc}}
+            <view class="snum">({{snum}}万评分)</view>
+        </view>
+        <view class="cat top">{{list.cat}}</view>
+        <view class="dur top">{{list.src}}/{{list.dur}}分钟</view>
+        <view class="rt top">{{list.rt}}</view>
+    </view>
+</view>
+<view class="button">
+    <view class="btn">立即购票</view>
+    <view class="detail" bindtap="show" animation="{{animationData}}">{{detail}}
+        <image src="{{pic}}" class="subscript"></image>
+    </view>
+</view>
+<view class="more">更多电影</view>
+<scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%;padding-top:10px">
+    <view class="movies">
+        <image  wx:for="{{movies}}" wx:key="{{index}}" src="{{item.img}}"></image>
+    </view>
+</scroll-view>
+<view class="more">全体演职人员</view>
+
+</scroll-view>
